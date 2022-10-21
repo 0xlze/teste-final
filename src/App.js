@@ -1,25 +1,62 @@
-import logo from './logo.svg';
+import vulpix from './vulpix.webp'
 import './App.css';
+import { createGlobalStyle } from 'styled-components'
+import { Header } from './components/Header';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <main>
+        <div className='display'>
+          <img src={vulpix} />
+          <h3>Name</h3>
+          <h3>Type</h3>
+          <button>More</button>
+        </div>
+
+        <div className='lista'>
+          <div className='pokeSearch'>
+            <input type="text"
+              placeholder='Digite o Pokemon ou o Tipo...'
+            />
+          </div>
+          <ul>
+            <li>#037 Vulpix</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <button>Veja mais</button>
+        </div>
+      </main>
     </div>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(30, 30, 30);
+  font-family: 'Jockey One', sans-serif;
+  font-size: 16px;.
+}
+
+li {
+  list-style: none;
+  
+}
+`
 
 export default App;
